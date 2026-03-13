@@ -522,7 +522,7 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo" onclick="showPage('home')">C&C<span>Contracting</span></div>
+                <img src="C&C-Logo-transparent.png" alt="C&C Contracting" class="logo" onclick="showPage('home')" style="height: 105px; width: auto; object-fit: contain;">
 
                 <div class="hamburger" onclick="toggleMenu()">
                     <span class="bar"></span>
@@ -597,10 +597,10 @@
                 <div class="section-header">
                     <div class="section-title">
                         <span>What We Do</span>
-                        <h2>Full-Service General Contracting</h2>
+                        <h2>Full-Service<br>General Contracting</h2>
                     </div>
                     <div class="section-desc">
-                        From concept to completion, we handle every phase of your project with precision and care.
+                        From concept to<br>completion, we handle every phase of your project with precision and care.
                     </div>
                 </div>
 
@@ -887,12 +887,12 @@
 
                         <div class="info-block">
                             <span class="info-label">Phone</span>
-                            <div class="info-val">(555) 123-4567</div>
+                            <div class="info-val"><a href="tel:+13213363750" style="color: inherit; text-decoration: none;">(321) 336-3750</a></div>
                         </div>
 
                         <div class="info-block">
                             <span class="info-label">Email</span>
-                            <div class="info-val" style="color: var(--accent-blue);">info@cccontracting.com</div>
+                            <div class="info-val" style="color: var(--accent-blue);"><a href="mailto:info@candcontracting.com" style="color: inherit; text-decoration: none;">info@candcontracting.com</a></div>
                         </div>
 
                         <div class="info-block">
@@ -928,7 +928,7 @@
     <footer>
         <div class="container" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
             <div>
-                <a class="footer-logo">C&C<span style="color: var(--accent-blue);">Contracting</span></a>
+                <a class="footer-logo">C&C Contracting</a>
                 <p style="color: #8B949E; max-width: 300px;">
                     Licensed general contractor serving residential and commercial clients throughout Florida.
                 </p>
@@ -1007,7 +1007,7 @@
             delete data.website_url;
 
             // N8N WEBHOOK URL — replace with your actual webhook
-            const WEBHOOK_URL = 'https://YOUR_N8N_INSTANCE.app.n8n.cloud/webhook/cc-form';
+            const WEBHOOK_URL = 'https://treycooper.app.n8n.cloud/webhook/cc-form';
 
             if (WEBHOOK_URL.includes('YOUR_N8N')) {
                 alert("Thank you for your interest! Our form integration is being set up. Please call or email us directly.");
