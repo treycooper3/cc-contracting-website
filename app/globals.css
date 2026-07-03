@@ -1,0 +1,202 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0d1117;
+  --card: #161b22;
+  --card-raised: #1c2128;
+  --primary: #1976d2;
+  --primary-hover: #1565c0;
+  --accent: #42a5f5;
+  --foreground: #e6edf3;
+  --muted: #8b949e;
+  --border: #21262d;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-card: var(--card);
+  --color-card-raised: var(--card-raised);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-accent: var(--accent);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-line: var(--border);
+  --font-heading: var(--font-montserrat);
+  --font-body: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-montserrat), sans-serif;
+  text-transform: uppercase;
+}
+
+section[id] {
+  scroll-margin-top: 96px;
+}
+
+/* Primary button with sliding fill (ported from legacy .btn::after) */
+.btn-fill {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.btn-fill::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 0%;
+  background: var(--primary-hover);
+  z-index: -1;
+  transition: width 0.3s ease;
+}
+.btn-fill:hover::after {
+  width: 100%;
+}
+
+/* Nav active/hover slashes */
+.nav-item::before {
+  content: "// ";
+  color: var(--primary);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.nav-item:hover::before {
+  opacity: 1;
+}
+
+/* Scroll reveal */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Top accent bar that scales in on hover (legacy .why-card::before) */
+.accent-top {
+  position: relative;
+  overflow: hidden;
+}
+.accent-top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+.accent-top:hover::before {
+  transform: scaleX(1);
+}
+
+/* Legal pages (privacy/terms) — ported from legacy typographic styles */
+.legal {
+  line-height: 1.8;
+}
+.legal h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.legal .effective-date {
+  color: var(--muted);
+  margin-bottom: 40px;
+  font-size: 0.95rem;
+}
+.legal h2 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin: 40px 0 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+  letter-spacing: 1px;
+}
+.legal h3 {
+  font-size: 1.1rem;
+  color: var(--foreground);
+  margin: 25px 0 10px;
+  text-transform: none;
+}
+.legal p,
+.legal li {
+  color: var(--muted);
+  margin-bottom: 15px;
+}
+.legal ul {
+  list-style: disc;
+  margin-left: 25px;
+  margin-bottom: 20px;
+}
+.legal li {
+  margin-bottom: 8px;
+}
+.legal a {
+  color: var(--primary);
+}
+.legal a:hover {
+  text-decoration: underline;
+}
+.legal .highlight-box {
+  background: var(--card-raised);
+  border-left: 4px solid var(--primary);
+  padding: 20px;
+  margin: 25px 0;
+  border-radius: 0 8px 8px 0;
+}
+.legal .highlight-box p {
+  margin-bottom: 0;
+  color: var(--foreground);
+}
+.legal .warning-box {
+  background: #1c1517;
+  border-left: 4px solid #dc3545;
+  padding: 20px;
+  margin: 25px 0;
+  border-radius: 0 8px 8px 0;
+}
+.legal .warning-box p {
+  margin-bottom: 0;
+  color: #ff6b6b;
+}
+.legal strong {
+  color: var(--foreground);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
