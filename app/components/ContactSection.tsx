@@ -3,11 +3,20 @@ import TrustLine from "./TrustLine";
 import { EMAIL, HOURS, PHONE_DISPLAY, PHONE_TEL } from "../lib/site";
 
 const INFO_BLOCKS = [
-  { label: "Location", value: <>Melbourne, FL</> },
+  {
+    label: "Location",
+    value: (
+      <>
+        Melbourne, FL
+        <br />
+        <span className="text-sm text-muted">Serving all of Florida</span>
+      </>
+    ),
+  },
   {
     label: "Phone",
     value: (
-      <a href={`tel:${PHONE_TEL}`} className="hover:text-accent">
+      <a href={`tel:${PHONE_TEL}`} className="-my-3 inline-block py-3 hover:text-accent">
         {PHONE_DISPLAY}
       </a>
     ),
@@ -15,7 +24,7 @@ const INFO_BLOCKS = [
   {
     label: "Email",
     value: (
-      <a href={`mailto:${EMAIL}`} className="text-primary hover:text-accent">
+      <a href={`mailto:${EMAIL}`} className="-my-3 inline-block py-3 text-primary hover:text-accent">
         {EMAIL}
       </a>
     ),

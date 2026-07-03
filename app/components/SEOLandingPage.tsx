@@ -106,7 +106,7 @@ export default function SEOLandingPage({ data }: { data: SEOPageData }) {
                     <h3 className="mb-3 font-heading text-lg font-bold uppercase text-foreground">
                       {highlight.title}
                     </h3>
-                    <p className="text-[0.95rem] text-muted">{highlight.description}</p>
+                    <p className="text-base text-muted">{highlight.description}</p>
                   </div>
                 </ScrollReveal>
               ))}
@@ -142,7 +142,7 @@ export default function SEOLandingPage({ data }: { data: SEOPageData }) {
                             <div className="mb-3 font-heading text-2xl font-extrabold text-primary">
                               {tier.range}
                             </div>
-                            <p className="text-[0.95rem] text-muted">{tier.description}</p>
+                            <p className="text-base text-muted">{tier.description}</p>
                           </div>
                         </ScrollReveal>
                       ))}
@@ -163,12 +163,13 @@ export default function SEOLandingPage({ data }: { data: SEOPageData }) {
             </h2>
             <div className="space-y-4">
               {data.faqs.map((faq) => (
-                <details key={faq.question} className="group border border-line bg-card p-6">
-                  <summary className="cursor-pointer list-none font-heading text-base font-bold uppercase tracking-wide text-foreground">
+                <details key={faq.question} className="group border border-line bg-card">
+                  {/* padding lives on the summary so the whole card header is a >=44px tap target */}
+                  <summary className="block cursor-pointer list-none p-6 font-heading text-base font-bold uppercase tracking-wide text-foreground">
                     <span className="text-primary">{"// "}</span>
                     {faq.question}
                   </summary>
-                  <p className="mt-4 text-muted">{faq.answer}</p>
+                  <p className="px-6 pb-6 text-muted">{faq.answer}</p>
                 </details>
               ))}
             </div>

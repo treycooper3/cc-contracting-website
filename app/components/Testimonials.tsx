@@ -26,7 +26,11 @@ export default function Testimonials() {
   return (
     <section className="border-t border-line bg-card py-24">
       <div className="mx-auto max-w-7xl px-6">
-        <SectionHeader eyebrow="Proven Work" title="Recent Project Outcomes" />
+        <SectionHeader
+          eyebrow="Proven Work"
+          title="Recent Project Outcomes"
+          description="Delivered from the Space Coast to South Florida — wherever the project is, we show up and build it right."
+        />
         {/* TODO: replace with collected client reviews once GBP is live */}
         <div className="grid gap-8 md:grid-cols-3">
           {OUTCOMES.map((outcome, index) => (

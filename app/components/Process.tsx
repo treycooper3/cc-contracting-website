@@ -44,7 +44,7 @@ export default function Process() {
                 <h3 className="mb-4 mt-5 font-heading text-base font-bold uppercase tracking-wide text-primary">
                   {step.title}
                 </h3>
-                <p className="text-sm text-muted">{step.description}</p>
+                <p className="text-base text-muted">{step.description}</p>
               </div>
             ))}
           </div>

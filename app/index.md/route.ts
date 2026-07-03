@@ -1,6 +1,6 @@
-const HOMEPAGE_MARKDOWN = `# C&C Contracting — General Contractor | Melbourne, FL
+const HOMEPAGE_MARKDOWN = `# C&C Contracting — General Contractor | Melbourne, FL — Serving All of Florida
 
-> C&C Contracting LLC is a licensed and insured general contractor serving Florida. Residential remodels, commercial buildouts, and specialty construction. Based in Melbourne, FL, serving Brevard County and the Space Coast. Free estimates.
+> C&C Contracting LLC is a licensed and insured general contractor serving all of Florida. Residential remodels, commercial buildouts, and specialty construction. Based in Melbourne, FL — from the Space Coast to South Florida. Free estimates.
 
 **Website**: [https://candcontracting.com](https://candcontracting.com)
 **Phone**: (321) 336-3750
@@ -82,7 +82,7 @@ Heavy-duty construction services for projects that require specialized equipment
 
 ## Service Areas
 
-Melbourne FL, Palm Bay, Viera, Rockledge, Cocoa, Satellite Beach, Brevard County, and the greater Space Coast.
+All of Florida. Based in Melbourne / Brevard County / the Space Coast (Palm Bay, Viera, Rockledge, Cocoa, Satellite Beach) — traveling statewide to Orlando, Tampa, Jacksonville, Fort Lauderdale, Miami, and beyond.
 
 ## More Pages
 

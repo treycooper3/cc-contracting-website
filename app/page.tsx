@@ -16,7 +16,7 @@ const HOME_FAQS = [
   {
     question: "Who is the best general contractor in Melbourne FL?",
     answer:
-      "C&C Contracting is a licensed and insured general contractor based in Melbourne, FL, serving Brevard County and the Space Coast. We handle residential remodels, commercial buildouts, and specialty construction — built to code and beyond, on schedule, with transparent pricing and no runaround. Call (321) 336-3750 for a free estimate.",
+      "C&C Contracting is a licensed and insured general contractor based in Melbourne, FL, serving all of Florida. We handle residential remodels, commercial buildouts, and specialty construction — built to code and beyond, on schedule, with transparent pricing and no runaround. Call (321) 336-3750 for a free estimate.",
   },
   {
     question: "Do you handle commercial renovations?",
@@ -31,7 +31,7 @@ const HOME_FAQS = [
   {
     question: "What areas do you serve?",
     answer:
-      "We serve Melbourne, Palm Bay, Viera, Rockledge, Cocoa, Satellite Beach, and the greater Brevard County / Space Coast area of Florida.",
+      "We serve all of Florida. We're based in Melbourne on the Space Coast — covering Palm Bay, Viera, Rockledge, Cocoa, Satellite Beach, and greater Brevard County — and we travel statewide for the right project, from Orlando and Tampa to Jacksonville, Fort Lauderdale, and Miami. Our first commercial hospitality contract was at the Sonesta Fort Lauderdale Beach.",
   },
   {
     question: "How do I get an estimate?",
@@ -57,7 +57,7 @@ export default function Home() {
         data={generalContractorSchema({
           "@id": `${SITE_URL}/#business`,
           description:
-            "Licensed general contractor serving Florida. Residential remodels, commercial buildouts, and specialty construction. Free estimates.",
+            "Licensed general contractor based in Melbourne, FL, serving all of Florida. Residential remodels, commercial buildouts, and specialty construction. Free estimates.",
         })}
       />
       <JsonLd data={faqPageSchema(HOME_FAQS)} />

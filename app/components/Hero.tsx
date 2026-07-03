@@ -33,8 +33,9 @@ export default function Hero() {
             Built to <span className="text-primary">Last.</span>
           </h1>
           <p className="mb-10 max-w-xl border-l-[3px] border-primary pl-5 text-lg text-[#c9d1d9]">
-            Quality general contracting for residential and commercial projects. From kitchen
-            remodels to full commercial buildouts, we deliver craftsmanship you can count on.
+            Quality general contracting for residential and commercial projects across Florida.
+            Based in Melbourne, FL — from kitchen remodels to full commercial buildouts, we
+            deliver craftsmanship you can count on, wherever the job is.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row">
             <Link

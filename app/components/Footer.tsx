@@ -17,6 +17,7 @@ const AREA_LINKS = [
   { href: "/general-contractor-palm-bay", label: "Palm Bay" },
   { href: "/commercial-renovation-brevard-county", label: "Brevard County" },
   { href: "/kitchen-bathroom-remodeling-melbourne", label: "Remodeling" },
+  { href: "/#contact", label: "All of Florida" },
 ];
 
 function LinkColumn({ title, links }: { title: string; links: { href: string; label: string }[] }) {
@@ -27,7 +28,10 @@ function LinkColumn({ title, links }: { title: string; links: { href: string; la
       </li>
       {links.map((link) => (
         <li key={link.href} className="mb-2">
-          <Link href={link.href} className="text-muted transition-colors hover:text-primary">
+          <Link
+            href={link.href}
+            className="-my-2 inline-block py-2 text-muted transition-colors hover:text-primary"
+          >
             {link.label}
           </Link>
         </li>
@@ -45,8 +49,8 @@ export default function Footer() {
             C&amp;C Contracting
           </span>
           <p className="max-w-xs text-muted">
-            Licensed general contractor serving residential and commercial clients throughout
-            Florida.
+            Licensed general contractor based in Melbourne, FL — serving residential and
+            commercial clients throughout Florida, from the Space Coast to South Florida.
           </p>
         </div>
         <div className="flex flex-wrap gap-12">

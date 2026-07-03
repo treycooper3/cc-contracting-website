@@ -51,7 +51,7 @@ export default function Nav() {
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen(!open)}
-          className="relative z-50 flex flex-col gap-[5px] md:hidden"
+          className="relative z-50 -m-4 flex flex-col gap-[5px] p-4 md:hidden"
         >
           <span
             className={`h-[3px] w-6 bg-foreground transition-transform ${open ? "translate-y-2 rotate-45" : ""}`}

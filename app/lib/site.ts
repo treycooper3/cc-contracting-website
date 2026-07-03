@@ -7,7 +7,6 @@ export const PHONE_TEL = "+13213363750";
 export const EMAIL = "info@candcontracting.com";
 export const CITY = "Melbourne";
 export const STATE = "FL";
-export const COUNTY = "Brevard County";
 export const GEO = { latitude: 28.0836, longitude: -80.6081 };
 export const HOURS = "Mon - Fri: 7AM - 5PM";
 // TODO: drop the FL CGC number in here once DBPR issues it — TrustLine renders "FL CGC #<number>" everywhere automatically.
@@ -23,6 +22,11 @@ export const AREA_SERVED = [
   "Satellite Beach",
   "Brevard County",
   "Space Coast",
+  "Orlando",
+  "Tampa",
+  "Jacksonville",
+  "Fort Lauderdale",
+  "Miami",
 ];
 
 // Base GeneralContractor schema — extend per page (e.g. add @id, description).
@@ -50,7 +54,10 @@ export function generalContractorSchema(
       latitude: GEO.latitude,
       longitude: GEO.longitude,
     },
-    areaServed: AREA_SERVED.map((name) => ({ "@type": "Place", name })),
+    areaServed: [
+      { "@type": "State", name: "Florida" },
+      ...AREA_SERVED.map((name) => ({ "@type": "Place", name })),
+    ],
     openingHours: "Mo-Fr 07:00-17:00",
     priceRange: "$$",
     sameAs: [],

@@ -48,7 +48,7 @@ export default function WhyChooseUs() {
                 <h3 className="mb-3 font-heading text-lg font-bold uppercase text-foreground">
                   {reason.title}
                 </h3>
-                <p className="text-[0.95rem] text-muted">{reason.description}</p>
+                <p className="text-base text-muted">{reason.description}</p>
               </div>
             </ScrollReveal>
           ))}

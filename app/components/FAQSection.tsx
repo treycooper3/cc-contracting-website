@@ -10,12 +10,13 @@ export default function FAQSection({ faqs }: { faqs: FAQItem[] }) {
         <SectionHeader eyebrow="FAQ" title="Frequently Asked Questions" />
         <div className="space-y-4">
           {faqs.map((faq) => (
-            <details key={faq.question} className="group border border-line bg-card p-6">
-              <summary className="cursor-pointer list-none font-heading text-base font-bold uppercase tracking-wide text-foreground">
+            <details key={faq.question} className="group border border-line bg-card">
+              {/* padding lives on the summary so the whole card header is a >=44px tap target */}
+              <summary className="block cursor-pointer list-none p-6 font-heading text-base font-bold uppercase tracking-wide text-foreground">
                 <span className="text-primary">{"// "}</span>
                 {faq.question}
               </summary>
-              <p className="mt-4 text-muted">{faq.answer}</p>
+              <p className="px-6 pb-6 text-muted">{faq.answer}</p>
             </details>
           ))}
         </div>

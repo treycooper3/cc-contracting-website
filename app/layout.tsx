@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "C&C Contracting | General Contractor — Residential & Commercial",
   description:
-    "C&C Contracting LLC — Licensed general contractor serving Florida. Residential remodels, commercial buildouts, and specialty construction. Free estimates.",
+    "C&C Contracting LLC — Melbourne-based general contractor serving all of Florida. Residential remodels, commercial buildouts, and specialty construction. Free estimates.",
   keywords: [
     "general contractor",
     "general contractor Melbourne FL",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "C&C Contracting | General Contractor — Residential & Commercial",
     description:
-      "Licensed general contractor serving Florida. Residential remodels, commercial buildouts, and specialty construction. Free estimates.",
+      "Melbourne-based general contractor serving all of Florida. Residential remodels, commercial buildouts, and specialty construction. Free estimates.",
     type: "website",
     locale: "en_US",
     url: SITE_URL,
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "C&C Contracting | General Contractor — Residential & Commercial",
     description:
-      "Licensed general contractor serving Florida. Residential remodels, commercial buildouts, and specialty construction. Free estimates.",
+      "Melbourne-based general contractor serving all of Florida. Residential remodels, commercial buildouts, and specialty construction. Free estimates.",
     images: [`${SITE_URL}/og.png`],
   },
 };
