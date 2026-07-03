@@ -10,6 +10,8 @@ export const STATE = "FL";
 export const COUNTY = "Brevard County";
 export const GEO = { latitude: 28.0836, longitude: -80.6081 };
 export const HOURS = "Mon - Fri: 7AM - 5PM";
+// TODO: drop the FL CGC number in here once DBPR issues it — TrustLine renders "FL CGC #<number>" everywhere automatically.
+export const LICENSE_NUMBER: string | null = null;
 export const FORM_WEBHOOK_URL = "https://treycooper.app.n8n.cloud/webhook/cc-form";
 
 export const AREA_SERVED = [

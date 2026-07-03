@@ -1,3 +1,5 @@
+import TrustLine from "./TrustLine";
+
 const STATS = [
   {
     label: "Licensed & Insured",
@@ -20,7 +22,8 @@ const STATS = [
 export default function Stats() {
   return (
     <section className="border-b border-line bg-card py-14">
-      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-6 md:grid-cols-4">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
         {STATS.map((stat) => (
           <div key={stat.label} className="flex flex-col items-center gap-3 text-center">
             <svg
@@ -41,6 +44,8 @@ export default function Stats() {
             </p>
           </div>
         ))}
+        </div>
+        <TrustLine className="mt-8 text-center" />
       </div>
     </section>
   );

@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 import { SITE_URL } from "./lib/site";
+import TopStrip from "./components/TopStrip";
+import StickyCallBar from "./components/StickyCallBar";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -78,10 +80,12 @@ export default function RootLayout({
         <link rel="help" type="text/plain" href="/llms.txt" />
       </head>
       <body
-        className={`${montserrat.variable} ${inter.variable} antialiased`}
+        className={`${montserrat.variable} ${inter.variable} antialiased pb-[calc(3.5rem+env(safe-area-inset-bottom))] md:pb-0`}
         suppressHydrationWarning
       >
+        <TopStrip />
         {children}
+        <StickyCallBar />
       </body>
     </html>
   );

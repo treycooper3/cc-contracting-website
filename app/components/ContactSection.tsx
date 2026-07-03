@@ -1,4 +1,5 @@
 import ContactForm from "./ContactForm";
+import TrustLine from "./TrustLine";
 import { EMAIL, HOURS, PHONE_DISPLAY, PHONE_TEL } from "../lib/site";
 
 const INFO_BLOCKS = [
@@ -52,9 +53,10 @@ export default function ContactSection() {
             ))}
           </div>
           <div className="border border-line bg-background p-10 md:p-16">
-            <h3 className="mb-8 font-heading text-xl font-bold uppercase tracking-wide text-foreground">
+            <h3 className="mb-3 font-heading text-xl font-bold uppercase tracking-wide text-foreground">
               Request a Free Estimate
             </h3>
+            <TrustLine className="mb-8" />
             <ContactForm />
           </div>
         </div>

@@ -1,16 +1,27 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Hero() {
   return (
     <section className="relative flex min-h-[85vh] items-center overflow-hidden border-b border-line py-20">
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-10 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "linear-gradient(to right, rgba(13,17,23,0.92) 0%, rgba(13,17,23,0.75) 50%, rgba(13,17,23,0.4) 100%), url('/hero-construction.jpg')",
-        }}
-      />
+      {/* next/image fill + priority instead of CSS background-image so the LCP image preloads */}
+      <div aria-hidden className="absolute inset-0 -z-10">
+        <Image
+          src="/hero-construction.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(13,17,23,0.92) 0%, rgba(13,17,23,0.75) 50%, rgba(13,17,23,0.4) 100%)",
+          }}
+        />
+      </div>
       <div className="mx-auto w-full max-w-7xl px-6">
         <div className="max-w-4xl">
           <span className="mb-5 block font-heading text-sm font-bold uppercase tracking-[0.3em] text-accent">

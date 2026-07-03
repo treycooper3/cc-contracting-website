@@ -17,6 +17,13 @@ export interface SEOPageData {
   serviceDescription: string;
   serviceArea: string;
   highlights: { title: string; description: string }[];
+  costGuide?: {
+    heading: string;
+    headingAccent: string;
+    intro: string;
+    groups: { title: string; tiers: { name: string; range: string; description: string }[] }[];
+    disclaimer: string;
+  };
   faqs: FAQItem[];
   ctaHeadline: string;
   ctaDescription: string;
@@ -106,6 +113,47 @@ export default function SEOLandingPage({ data }: { data: SEOPageData }) {
             </div>
           </div>
         </section>
+
+        {/* Cost guide (optional) */}
+        {data.costGuide && (
+          <section className="border-t border-line py-20">
+            <div className="mx-auto max-w-7xl px-6">
+              <h2 className="mb-6 text-center font-heading text-3xl font-extrabold uppercase text-foreground">
+                {data.costGuide.heading}{" "}
+                <span className="text-primary">{data.costGuide.headingAccent}</span>
+              </h2>
+              <p className="mx-auto mb-12 max-w-2xl text-center text-muted">
+                {data.costGuide.intro}
+              </p>
+              <div className="space-y-14">
+                {data.costGuide.groups.map((group) => (
+                  <div key={group.title}>
+                    <h3 className="mb-8 font-heading text-xl font-bold uppercase text-foreground">
+                      <span className="text-primary">{"// "}</span>
+                      {group.title}
+                    </h3>
+                    <div className="grid gap-8 md:grid-cols-3">
+                      {group.tiers.map((tier, index) => (
+                        <ScrollReveal key={tier.name} delay={index * 120}>
+                          <div className="accent-top h-full border border-line bg-card p-9">
+                            <h4 className="mb-2 font-heading text-base font-bold uppercase text-foreground">
+                              {tier.name}
+                            </h4>
+                            <div className="mb-3 font-heading text-2xl font-extrabold text-primary">
+                              {tier.range}
+                            </div>
+                            <p className="text-[0.95rem] text-muted">{tier.description}</p>
+                          </div>
+                        </ScrollReveal>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-10 text-center text-sm text-muted">{data.costGuide.disclaimer}</p>
+            </div>
+          </section>
+        )}
 
         {/* FAQs */}
         <section className="py-20">

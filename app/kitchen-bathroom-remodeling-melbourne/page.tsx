@@ -47,6 +47,64 @@ const data: SEOPageData = {
         "Pair your remodel with flooring and tile installation, drywall and painting, or a home addition — one contractor, one schedule, one standard.",
     },
   ],
+  // TODO(Charles): adjust these ranges to actual C&C pricing — currently conservative
+  // nationally-cited remodeling ranges (Remodeling Magazine Cost vs. Value ballparks).
+  costGuide: {
+    heading: "What Does a Remodel Cost in",
+    headingAccent: "Melbourne?",
+    intro:
+      "These are typical ranges, not quotes — every project is quoted individually from a free on-site visit, with a detailed written estimate before any work begins.",
+    groups: [
+      {
+        title: "Kitchen Remodeling",
+        tiers: [
+          {
+            name: "Minor Refresh",
+            range: "$15K – $30K",
+            description:
+              "Cabinet refacing or repainting, new countertops, backsplash, fixtures, and hardware — same layout, new look.",
+          },
+          {
+            name: "Mid-Range Remodel",
+            range: "$30K – $75K",
+            description:
+              "New cabinets, stone counters, flooring, lighting, and appliances, with modest layout adjustments.",
+          },
+          {
+            name: "Full Gut Renovation",
+            range: "$75K+",
+            description:
+              "Down to the studs — layout changes, plumbing and electrical relocation, custom cabinetry, and premium finishes.",
+          },
+        ],
+      },
+      {
+        title: "Bathroom Remodeling",
+        tiers: [
+          {
+            name: "Minor Refresh",
+            range: "$8K – $15K",
+            description:
+              "New vanity, fixtures, tile accents, lighting, and paint — a clean update without moving anything.",
+          },
+          {
+            name: "Mid-Range Remodel",
+            range: "$15K – $35K",
+            description:
+              "Tile shower or tub-to-shower conversion, new tile floors, vanity and counters, and proper ventilation.",
+          },
+          {
+            name: "Full Gut Renovation",
+            range: "$35K+",
+            description:
+              "Complete teardown and rebuild — layout changes, curbless showers, custom tile work, and premium fixtures.",
+          },
+        ],
+      },
+    ],
+    disclaimer:
+      "Typical ranges only — final pricing depends on size, materials, and scope. Every project is quoted individually with a free, no-obligation on-site estimate.",
+  },
   faqs: [
     {
       question: "How long does a kitchen or bathroom remodel take?",
@@ -67,6 +125,16 @@ const data: SEOPageData = {
       question: "What does a remodel cost?",
       answer:
         "Pricing depends on size, materials, and scope, so we quote from a free on-site visit. You get a transparent, detailed estimate up front — no hidden fees, no surprises — and changes only happen through written change orders you approve.",
+    },
+    {
+      question: "How much does a kitchen remodel cost in Melbourne, FL?",
+      answer:
+        "Typical ranges: a minor refresh (refacing, counters, backsplash, fixtures) runs roughly $15K–$30K; a mid-range remodel with new cabinets, stone counters, and flooring roughly $30K–$75K; a full gut renovation with layout changes $75K and up. These are typical ranges only — every project is quoted individually from a free on-site estimate.",
+    },
+    {
+      question: "How much does a bathroom remodel cost in Melbourne, FL?",
+      answer:
+        "Typical ranges: a minor refresh (vanity, fixtures, lighting, paint) runs roughly $8K–$15K; a mid-range remodel with a tile shower or tub conversion roughly $15K–$35K; a full gut renovation with layout changes $35K and up. These are typical ranges only — every project is quoted individually from a free on-site estimate.",
     },
     {
       question: "Do you remodel outside Melbourne?",

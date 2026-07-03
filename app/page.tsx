@@ -6,6 +6,7 @@ import WhyChooseUs from "./components/WhyChooseUs";
 import Projects from "./components/Projects";
 import Process from "./components/Process";
 import Testimonials from "./components/Testimonials";
+import FAQSection from "./components/FAQSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import JsonLd from "./components/JsonLd";
@@ -69,6 +70,7 @@ export default function Home() {
         <Projects />
         <Process />
         <Testimonials />
+        <FAQSection faqs={HOME_FAQS} />
         <ContactSection />
       </main>
       <Footer />
