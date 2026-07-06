@@ -1,5 +1,5 @@
 // Single source of truth for NAP + site constants. Keep these EXACT everywhere.
-export const SITE_URL = "https://candcontracting.com";
+export const SITE_URL = "https://www.candcontracting.com"; // apex 307s to www — www is canonical on Vercel
 export const BUSINESS_NAME = "C&C Contracting";
 export const LEGAL_NAME = "C&C Contracting LLC";
 export const PHONE_DISPLAY = "(321) 336-3750";
