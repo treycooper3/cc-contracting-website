@@ -28,7 +28,7 @@ export default async function PortalLayout({ children }: { children: React.React
             C&C Portal
           </Link>
           {member && (
-            <nav className="flex gap-5 text-sm">
+            <nav className="flex flex-wrap gap-x-5 gap-y-1 text-sm">
               {NAV.map((item) => (
                 <Link key={item.href} href={item.href} className="text-muted hover:text-foreground">
                   {item.label}
