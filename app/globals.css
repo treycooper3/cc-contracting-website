@@ -10,6 +10,9 @@
   --foreground: #e6edf3;
   --muted: #8b949e;
   --border: #21262d;
+  /* Portal status colour. Blue is the brand accent, so it cannot also mean
+     "overdue" — this red carries that meaning, always alongside a text label. */
+  --danger: #f85149;
 }
 
 @theme inline {
@@ -22,6 +25,7 @@
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
   --color-line: var(--border);
+  --color-danger: var(--danger);
   --font-heading: var(--font-montserrat);
   --font-body: var(--font-inter);
 }

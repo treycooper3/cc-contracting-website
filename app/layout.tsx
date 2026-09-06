@@ -4,6 +4,7 @@ import "./globals.css";
 import { SITE_URL } from "./lib/site";
 import TopStrip from "./components/TopStrip";
 import StickyCallBar from "./components/StickyCallBar";
+import MarketingChrome from "./components/MarketingChrome";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -83,9 +84,13 @@ export default function RootLayout({
         className={`${montserrat.variable} ${inter.variable} antialiased pb-[calc(3.5rem+env(safe-area-inset-bottom))] md:pb-0`}
         suppressHydrationWarning
       >
-        <TopStrip />
+        <MarketingChrome>
+          <TopStrip />
+        </MarketingChrome>
         {children}
-        <StickyCallBar />
+        <MarketingChrome>
+          <StickyCallBar />
+        </MarketingChrome>
       </body>
     </html>
   );
