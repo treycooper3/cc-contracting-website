@@ -5,7 +5,9 @@ import SectionHeader from "./SectionHeader";
 /**
  * The wide card is real jobsite video: the radiant heated floor build
  * (PEX layup → self-leveling pour → finished slab), cut from Charles's
- * footage. The photo cards illustrate the service categories.
+ * footage. The ahu-* cards are real jobsite photos from a rooftop air handler
+ * changeout; the gen-* cards are generated stand-ins for categories we don't
+ * have photos of yet — replace them as real ones come in.
  */
 const PROJECTS: {
   category: string;
@@ -22,6 +24,9 @@ const PROJECTS: {
     poster: "/projects/radiant-floor-layup.jpg",
     wide: true,
   },
+  { category: "Commercial", title: "Rooftop Air Handler Replacement", image: "/projects/ahu-lift-overhead.jpg" },
+  { category: "Commercial", title: "Rooftop Mechanical Demolition", image: "/projects/ahu-before-rusted-cabinet.jpg" },
+  { category: "Commercial", title: "New Air Handler Set & Piped", image: "/projects/ahu-after-new-unit-set.jpg" },
   { category: "Residential", title: "Modern Kitchen Renovation", image: "/projects/gen-kitchen-remodel.jpg" },
   { category: "Commercial", title: "Office Tenant Buildout", image: "/projects/gen-office-buildout.jpg" },
   { category: "Residential", title: "Bathroom Remodel", image: "/projects/gen-bathroom-remodel.jpg" },
@@ -66,7 +71,7 @@ export default function Projects() {
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
                 )}
-                <div className="pointer-events-none absolute bottom-0 left-0 w-full translate-y-2 bg-gradient-to-t from-background/95 to-transparent p-7 transition-transform duration-300 group-hover:translate-y-0">
+                <div className="pointer-events-none absolute bottom-0 left-0 w-full translate-y-2 bg-gradient-to-t from-background via-background/75 to-transparent p-7 transition-transform duration-300 group-hover:translate-y-0">
                   <span className="mb-1 block font-heading text-xs font-bold uppercase tracking-[0.2em] text-accent">
                     {project.category}
                   </span>
