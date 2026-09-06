@@ -1,21 +1,31 @@
+import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
 import SectionHeader from "./SectionHeader";
 
-/* TODO: real jobsite photos from Charles — these are branded placeholder panels, not stock. */
-const PROJECTS = [
-  { category: "Residential", title: "Modern Kitchen Renovation", wide: true },
-  { category: "Commercial", title: "Office Tenant Buildout" },
-  { category: "Residential", title: "Bathroom Remodel" },
-  { category: "Outdoor Living", title: "Deck & Patio Extension" },
-  { category: "Commercial", title: "Retail Space Renovation" },
-];
-
-const PANEL_GRADIENTS = [
-  "linear-gradient(135deg, #10151d 0%, #0d3a6e 60%, #1976d2 130%)",
-  "linear-gradient(160deg, #161b22 0%, #113050 70%, #42a5f5 160%)",
-  "linear-gradient(120deg, #0d1117 0%, #14294a 65%, #1565c0 140%)",
-  "linear-gradient(150deg, #12181f 0%, #0f3560 70%, #1976d2 150%)",
-  "linear-gradient(140deg, #0d1117 10%, #123a63 75%, #42a5f5 170%)",
+/**
+ * The wide card is real jobsite video: the radiant heated floor build
+ * (PEX layup → self-leveling pour → finished slab), cut from Charles's
+ * footage. The photo cards illustrate the service categories.
+ */
+const PROJECTS: {
+  category: string;
+  title: string;
+  image?: string;
+  video?: string;
+  poster?: string;
+  wide?: boolean;
+}[] = [
+  {
+    category: "In-Floor Heating & Concrete",
+    title: "Radiant Heated Floor — Layup, Pour & Finish",
+    video: "/heated-floor-montage.mp4",
+    poster: "/projects/radiant-floor-layup.jpg",
+    wide: true,
+  },
+  { category: "Residential", title: "Modern Kitchen Renovation", image: "/projects/gen-kitchen-remodel.jpg" },
+  { category: "Commercial", title: "Office Tenant Buildout", image: "/projects/gen-office-buildout.jpg" },
+  { category: "Residential", title: "Bathroom Remodel", image: "/projects/gen-bathroom-remodel.jpg" },
+  { category: "Outdoor Living", title: "Deck & Patio Extension", image: "/projects/gen-deck-patio.jpg" },
 ];
 
 export default function Projects() {
@@ -35,22 +45,28 @@ export default function Projects() {
               className={project.wide ? "md:col-span-2" : ""}
             >
               <div className="group relative h-72 overflow-hidden border border-line md:h-96">
-                <div
-                  className="h-full w-full transition-transform duration-700 ease-out group-hover:scale-105"
-                  style={{ background: PANEL_GRADIENTS[index % PANEL_GRADIENTS.length] }}
-                >
-                  {/* Blueprint grid texture */}
-                  <div
-                    aria-hidden
-                    className="h-full w-full opacity-[0.14]"
-                    style={{
-                      backgroundImage:
-                        "linear-gradient(rgba(230,237,243,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(230,237,243,0.5) 1px, transparent 1px)",
-                      backgroundSize: "44px 44px",
-                    }}
+                {project.video ? (
+                  <video
+                    src={project.video}
+                    poster={project.poster}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                    aria-label={`${project.category} — ${project.title}`}
+                    className="h-full w-full object-cover"
                   />
-                </div>
-                <div className="absolute bottom-0 left-0 w-full translate-y-2 bg-gradient-to-t from-background/95 to-transparent p-7 transition-transform duration-300 group-hover:translate-y-0">
+                ) : (
+                  <Image
+                    src={project.image as string}
+                    alt={`${project.category} — ${project.title}`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
+                )}
+                <div className="pointer-events-none absolute bottom-0 left-0 w-full translate-y-2 bg-gradient-to-t from-background/95 to-transparent p-7 transition-transform duration-300 group-hover:translate-y-0">
                   <span className="mb-1 block font-heading text-xs font-bold uppercase tracking-[0.2em] text-accent">
                     {project.category}
                   </span>
