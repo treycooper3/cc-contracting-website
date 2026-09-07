@@ -62,6 +62,28 @@ export default function Footer() {
       <div className="mt-12 text-center text-xs text-[#484f58]">
         &copy; {new Date().getFullYear()} C&amp;C Contracting LLC. All Rights Reserved.
       </div>
+      {/* CC-BY 4.0 requires visible attribution wherever the track is used. */}
+      <div className="mt-2 text-center text-[11px] text-[#484f58]">
+        Project video music: &ldquo;Inspired&rdquo; by Kevin MacLeod (
+        <a
+          href="https://incompetech.com"
+          target="_blank"
+          rel="noreferrer noopener"
+          className="underline hover:text-muted"
+        >
+          incompetech.com
+        </a>
+        ), licensed under{" "}
+        <a
+          href="https://creativecommons.org/licenses/by/4.0/"
+          target="_blank"
+          rel="noreferrer noopener"
+          className="underline hover:text-muted"
+        >
+          CC BY 4.0
+        </a>
+        .
+      </div>
     </footer>
   );
 }
