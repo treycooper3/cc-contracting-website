@@ -13,6 +13,9 @@
   /* Portal status colour. Blue is the brand accent, so it cannot also mean
      "overdue" — this red carries that meaning, always alongside a text label. */
   --danger: #f85149;
+  /* Text that sits ON the primary colour (buttons). White on this blue; TnD's
+     amber needs ink. Same token name on both sites so the portal code is shared. */
+  --on-primary: #ffffff;
 }
 
 @theme inline {
@@ -26,6 +29,7 @@
   --color-muted: var(--muted);
   --color-line: var(--border);
   --color-danger: var(--danger);
+  --color-on-primary: var(--on-primary);
   --font-heading: var(--font-montserrat);
   --font-body: var(--font-inter);
 }

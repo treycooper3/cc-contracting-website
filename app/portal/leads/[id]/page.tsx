@@ -9,7 +9,7 @@ import DocumentUpload from "./DocumentUpload";
 
 export const dynamic = "force-dynamic";
 
-const field = "rounded border border-line bg-card px-3 py-2 text-foreground";
+const field = "w-full min-w-0 rounded border border-line bg-card px-3 py-2 text-foreground";
 const label = "text-xs uppercase tracking-wider text-muted";
 
 export default async function LeadPage({ params }: { params: Promise<{ id: string }> }) {
@@ -118,7 +118,7 @@ export default async function LeadPage({ params }: { params: Promise<{ id: strin
           <input name="site_location" defaultValue={lead.site_location ?? ""} className={field} />
         </div>
 
-        <button type="submit" className="w-fit rounded bg-primary px-4 py-2 font-heading text-white">
+        <button type="submit" className="w-fit rounded bg-primary px-4 py-2 font-heading text-on-primary">
           Save
         </button>
       </form>

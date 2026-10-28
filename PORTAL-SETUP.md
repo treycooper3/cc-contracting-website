@@ -21,8 +21,14 @@ Management API — nothing left to paste into the SQL editor):
   | Beverley | `bchisholm.bc@gmail.com` (WITH the h) | office |
   | Donald | `biggerdon.dc@gmail.com` | ops |
 
-- Auth redirect allowlist includes `https://www.candcontracting.com/auth/callback`
-  and `http://localhost:3001/auth/**` (TnD owns `:3000`).
+- Auth redirect allowlist includes `https://www.candcontracting.com/auth/**`,
+  `https://candcontracting.com/auth/**` and `http://localhost:3001/auth/**` (TnD owns
+  `:3000`). **The `/**` matters.** The project's single `site_url` is
+  `https://tndmechanical.com`; GoTrue waves through any redirect on that hostname and
+  glob-matches everyone else against this list. Until 2026-10-27 the C&C entry was the bare
+  path, which does not match `...callback?next=%2Fportal`, so every production C&C magic
+  link fell back to `site_url` and landed on the TnD homepage. `check_setup.py` now asserts
+  the real redirect URL against the live config so this cannot silently regress.
 - `.env.local` filled in: shared Supabase project + fresh `CC_LEADS_WEBHOOK_SECRET`
   and `CC_CALENDAR_TOKEN`.
 

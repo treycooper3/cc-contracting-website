@@ -84,7 +84,7 @@ export default function MonthCalendar({
                 <span
                   className={
                     isToday
-                      ? "rounded bg-primary px-1.5 text-xs font-semibold text-white"
+                      ? "rounded bg-primary px-1.5 text-xs font-semibold text-on-primary"
                       : "px-0.5 text-xs text-muted"
                   }
                 >

@@ -12,7 +12,7 @@ const CATEGORIES: CapabilityRow["category"][] = [
   "vapi_permission",
 ];
 
-const field = "rounded border border-line bg-card px-3 py-2 text-foreground";
+const field = "w-full min-w-0 rounded border border-line bg-card px-3 py-2 text-foreground";
 
 export default async function CapabilitiesPage() {
   const member = await getMember();
@@ -107,7 +107,7 @@ export default async function CapabilitiesPage() {
             <input name="value" placeholder="150 miles / 5 business days" className={field} />
             <input name="notes" placeholder="Exception rule, caveats" className={`${field} sm:col-span-2`} />
           </div>
-          <button type="submit" className="w-fit rounded bg-primary px-4 py-2 font-heading text-white">
+          <button type="submit" className="w-fit rounded bg-primary px-4 py-2 font-heading text-on-primary">
             Save
           </button>
         </form>

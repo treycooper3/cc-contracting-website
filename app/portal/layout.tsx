@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { getMember } from "../lib/supabase-server";
 import { isSupabaseConfigured } from "../lib/supabase";
+import PortalNav from "./PortalNav";
 import SignOutButton from "./SignOutButton";
 
 export const metadata: Metadata = {
@@ -9,38 +10,21 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-const NAV = [
-  { href: "/portal/dashboard", label: "Dashboard" },
-  { href: "/portal", label: "Pipeline" },
-  { href: "/portal/deadlines", label: "Deadlines" },
-  { href: "/portal/invoices", label: "Invoices" },
-  { href: "/portal/capabilities", label: "Capabilities" },
-];
-
 export default async function PortalLayout({ children }: { children: React.ReactNode }) {
   const member = isSupabaseConfigured() ? await getMember() : null;
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <header className="border-b border-line">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-2 px-4 py-4">
-          <Link href="/portal" className="font-heading text-lg tracking-wide text-primary">
+      <header className="border-b border-line bg-card/40">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-3 px-4 py-3 sm:px-6">
+          <Link href="/portal" className="font-heading text-base tracking-wide text-primary">
             C&C Portal
           </Link>
-          {member && (
-            <nav className="flex flex-wrap gap-x-5 gap-y-1 text-sm">
-              {NAV.map((item) => (
-                <Link key={item.href} href={item.href} className="text-muted hover:text-foreground">
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
-          )}
-          <div className="ml-auto flex items-center gap-4 text-sm text-muted">
+          <div className="ml-auto flex items-center gap-4 text-xs text-muted">
             {member && (
               <>
-                <span>
-                  {member.full_name} · {member.role}
+                <span className="hidden sm:inline">
+                  {member.full_name} <span className="text-line">·</span> {member.role}
                 </span>
                 <SignOutButton />
               </>
@@ -49,9 +33,14 @@ export default async function PortalLayout({ children }: { children: React.React
               Site
             </Link>
           </div>
+          {member && (
+            <div className="w-full">
+              <PortalNav />
+            </div>
+          )}
         </div>
       </header>
-      <main className="mx-auto max-w-6xl px-4 py-8">{children}</main>
+      <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6">{children}</main>
     </div>
   );
 }

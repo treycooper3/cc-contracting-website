@@ -63,7 +63,7 @@ function LoginForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="rounded bg-primary px-4 py-2 font-heading text-white disabled:opacity-60"
+        className="rounded bg-primary px-4 py-2 font-heading text-on-primary disabled:opacity-60"
       >
         {status === "sending" ? "Sending" : "Email me a sign-in link"}
       </button>

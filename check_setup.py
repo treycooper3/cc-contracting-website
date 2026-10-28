@@ -8,17 +8,80 @@ so this is the build. It reads .env.local, talks to Supabase, and tells you the
 next thing that is wrong. Prints no secrets.
 """
 
+import base64
 import json
 import pathlib
+import re
+import subprocess
 import sys
 import urllib.error
+import urllib.parse
 import urllib.request
 
 HERE = pathlib.Path(__file__).parent
 TABLES = ("cc_members", "cc_leads", "cc_events", "cc_documents",
           "cc_notes", "cc_invoices", "cc_capabilities")
+PROJECT_REF = "rrhpsjxbpsvmritkjgdj"
+SITE_URL = "https://www.candcontracting.com"   # keep equal to app/lib/site.ts
 
 OK, BAD, WARN = "  ok  ", " FAIL ", " todo "
+
+
+def management_token():
+    """The Supabase CLI login token, from the macOS keychain. None if absent."""
+    try:
+        raw = subprocess.run(
+            ["security", "find-generic-password", "-s", "Supabase CLI", "-w"],
+            capture_output=True, text=True, check=True).stdout.strip()
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        return None
+    prefix = "go-keyring-base64:"
+    return base64.b64decode(raw[len(prefix):]).decode() if raw.startswith(prefix) else raw
+
+
+def redirect_allowed(redirect, site_url, allow_list):
+    """Mirror GoTrue's IsRedirectURLValid: same hostname as site_url passes
+    outright, otherwise the URL must glob-match an allowlist entry. gobwas/glob
+    treats '.' and '/' as separators, so '*' stops at them and only '**' crosses.
+    A bare path entry therefore does NOT match '...callback?next=/portal', which
+    is exactly how the C&C login ended up on the TnD site for weeks."""
+    if urllib.parse.urlparse(redirect).hostname == urllib.parse.urlparse(site_url).hostname:
+        return True
+    for pattern in allow_list:
+        regex = "".join(
+            ".*" if tok == "**" else "[^./]*" if tok == "*" else re.escape(tok)
+            for tok in re.split(r"(\*\*|\*)", pattern) if tok)
+        if re.fullmatch(regex, redirect):
+            return True
+    return False
+
+
+def check_auth_redirect(problems):
+    print("\nAUTH  (shared project — one site_url, so the allowlist is what routes us)")
+    token = management_token()
+    if not token:
+        print(f"[{WARN}] no Supabase CLI token in keychain; run `supabase login` to check")
+        return
+    # curl, not urllib: the Management API's Cloudflare front answers urllib with a 1010.
+    out = subprocess.run(
+        ["curl", "-s", "--max-time", "20", "-H", f"Authorization: Bearer {token}",
+         f"https://api.supabase.com/v1/projects/{PROJECT_REF}/config/auth"],
+        capture_output=True, text=True).stdout
+    try:
+        config = json.loads(out)
+        site_url, allow = config["site_url"], config["uri_allow_list"].split(",")
+    except (ValueError, KeyError):
+        print(f"[{BAD}] could not read auth config: {out[:80]}")
+        problems.append("auth config unreadable — token expired? `supabase login`")
+        return
+    # The URL the login page really sends, query string included.
+    redirect = f"{SITE_URL}/auth/callback?next={urllib.parse.quote('/portal', safe='')}"
+    ok = redirect_allowed(redirect, site_url, allow)
+    print(f"[{OK if ok else BAD}] {redirect}")
+    print(f"        site_url={site_url}")
+    if not ok:
+        problems.append(f"magic links will land on {site_url}: add {SITE_URL}/auth/** "
+                        "to the auth redirect allowlist")
 
 
 def load_env():
@@ -61,6 +124,8 @@ def main():
     if not url or not anon:
         print("\nCannot reach Supabase without a URL and anon key.\n")
         return 1
+
+    check_auth_redirect(problems)
 
     print("\nSCHEMA  (migration 001)")
     for table in TABLES:
