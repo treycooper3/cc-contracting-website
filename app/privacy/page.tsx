@@ -91,7 +91,7 @@ export default function PrivacyPage() {
       <h2>4. Florida-Specific Disclosures</h2>
       <div className="highlight-box">
         <p>
-          As a licensed contractor operating in Florida, we maintain records in accordance with
+          As a contractor operating in Florida, we maintain records in accordance with
           Florida Statutes Chapter 489 (Contracting) and Chapter 553 (Building Construction
           Standards). Project records may be retained for the periods required by law.
         </p>

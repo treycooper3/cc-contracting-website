@@ -4,7 +4,7 @@ import { SITE_URL } from "../lib/site";
 
 const TITLE = "Kitchen & Bathroom Remodeling in Melbourne, FL | C&C Contracting";
 const DESCRIPTION =
-  "Kitchen and bathroom remodeling in Melbourne, FL by a licensed general contractor. Cabinets, counters, tile, plumbing fixtures — free estimates. (321) 336-3750.";
+  "Kitchen and bathroom remodeling in Melbourne, FL by an insured general contractor. Cabinets, counters, tile, plumbing fixtures — free estimates. (321) 336-3750.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -19,16 +19,16 @@ const data: SEOPageData = {
   headline: "Kitchen & Bathroom",
   headlineAccent: "Remodeling",
   subheadline:
-    "From dated to showpiece. Licensed remodeling for Melbourne homes — quality materials, expert craftsmanship, and a schedule we actually keep.",
+    "From dated to showpiece. Remodeling for Melbourne homes — quality materials, expert craftsmanship, and a schedule we actually keep.",
   intro: [
-    "Kitchens and bathrooms are where remodeling dollars work hardest — and where cut corners show first. C&C Contracting remodels kitchens and bathrooms across Melbourne and Brevard County as a licensed and insured Florida general contractor, which means your project gets real project management: permits pulled where required, work built to Florida Building Code, licensed trades coordinated, and inspections passed — not just new surfaces over old problems.",
+    "Kitchens and bathrooms are where remodeling dollars work hardest — and where cut corners show first. C&C Contracting remodels kitchens and bathrooms across Melbourne and Brevard County as an insured Florida general contractor, and your project gets real project management: permits where required, work built to Florida Building Code, licensed trades coordinated, and inspections passed — not just new surfaces over old problems.",
     "A kitchen remodel with us can run from cabinet and countertop replacement to a full gut: layout changes, flooring and tile, drywall and paint, lighting, and finish carpentry. Bathroom remodels cover tub-to-shower conversions, tile showers and floors, vanities and counters, fixtures, and ventilation done right — critical in Florida humidity, where poor moisture control turns a pretty bathroom into a mold problem.",
     "Every project follows the same four-step process: a free on-site consultation to understand your vision and budget; a detailed, transparent estimate with scope, materials, timeline, and pricing; expert execution with regular updates and quality inspections; and a final walkthrough with your sign-off before we call it done. One of our recent clients put it simply: we transformed an outdated kitchen into a modern showpiece and finished ahead of schedule.",
     "If your kitchen or bathroom is stuck in a past decade, get a free, no-obligation estimate. Call (321) 336-3750 or use the form below.",
   ],
   serviceName: "Kitchen & Bathroom Remodeling",
   serviceDescription:
-    "Kitchen and bathroom remodeling in Melbourne, FL — cabinets, countertops, tile, showers, vanities, flooring, and full renovations by a licensed general contractor.",
+    "Kitchen and bathroom remodeling in Melbourne, FL — cabinets, countertops, tile, showers, vanities, flooring, and full renovations by an insured general contractor.",
   serviceArea: "Melbourne, FL",
   highlights: [
     {
@@ -114,7 +114,7 @@ const data: SEOPageData = {
     {
       question: "Do I need a permit to remodel a kitchen or bathroom in Melbourne?",
       answer:
-        "Many remodels involving plumbing, electrical, or structural changes require permits under the Florida Building Code. As a licensed contractor, we obtain required permits before work begins and coordinate all inspections.",
+        "Many remodels involving plumbing, electrical, or structural changes require permits under the Florida Building Code. Required permits are obtained before work begins, and we coordinate all inspections.",
     },
     {
       question: "Can you work from my design ideas?",

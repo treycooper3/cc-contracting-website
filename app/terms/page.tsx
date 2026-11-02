@@ -22,14 +22,14 @@ export default function TermsPage() {
 
       <h2>1. Company Information</h2>
       <p>
-        <strong>C&amp;C Contracting LLC</strong> is a licensed general contractor operating in
+        <strong>C&amp;C Contracting LLC</strong> is a general contractor operating in
         the State of Florida, providing residential and commercial construction, renovation, and
         remodeling services.
       </p>
       <ul>
         <li>Location: Melbourne, Florida</li>
         <li>
-          Email: <a href="mailto:info@candcontracting.com">info@candcontracting.com</a>
+          Email: <a href="mailto:treycooper@candcontracting.com">treycooper@candcontracting.com</a>
         </li>
         <li>
           Phone: <a href="tel:+13213363750">(321) 336-3750</a>
@@ -117,9 +117,9 @@ export default function TermsPage() {
       <h2>5. Florida Construction Law Compliance</h2>
       <h3>5.1 Licensing</h3>
       <p>
-        C&amp;C Contracting LLC maintains all licenses required by the Florida Department of
-        Business and Professional Regulation (DBPR) and the Florida Construction Industry
-        Licensing Board. License information is available upon request.
+        Work that requires a Florida contractor license under Chapter 489, Florida Statutes, is
+        performed only under an appropriate license issued by the Florida Department of Business
+        and Professional Regulation (DBPR). License information is available upon request.
       </p>
       <h3>5.2 Permits and Inspections</h3>
       <p>In accordance with Florida Building Code requirements:</p>

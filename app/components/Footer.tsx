@@ -17,6 +17,7 @@ const AREA_LINKS = [
   { href: "/general-contractor-palm-bay", label: "Palm Bay" },
   { href: "/commercial-renovation-brevard-county", label: "Brevard County" },
   { href: "/kitchen-bathroom-remodeling-melbourne", label: "Remodeling" },
+  { href: "/water-damage-restoration-melbourne", label: "Water Damage Restoration" },
   { href: "/#contact", label: "All of Florida" },
 ];
 
@@ -49,7 +50,7 @@ export default function Footer() {
             C&amp;C Contracting
           </span>
           <p className="max-w-xs text-muted">
-            Licensed general contractor based in Melbourne, FL — serving residential and
+            General contractor based in Melbourne, FL — serving residential and
             commercial clients throughout Florida, from the Space Coast to South Florida.
           </p>
         </div>

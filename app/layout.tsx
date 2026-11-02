@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     "tenant buildout",
     "Brevard County contractor",
     "Space Coast construction",
-    "licensed contractor Florida",
+    "insured contractor Florida",
   ],
   alternates: {
     canonical: SITE_URL,

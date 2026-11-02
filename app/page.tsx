@@ -16,7 +16,7 @@ const HOME_FAQS = [
   {
     question: "Who is the best general contractor in Melbourne FL?",
     answer:
-      "C&C Contracting is a licensed and insured general contractor based in Melbourne, FL, serving all of Florida. We handle residential remodels, commercial buildouts, and specialty construction — built to code and beyond, on schedule, with transparent pricing and no runaround. Call (321) 336-3750 for a free estimate.",
+      "C&C Contracting is an insured general contractor based in Melbourne, FL, serving all of Florida. We handle residential remodels, commercial buildouts, and specialty construction — built to code and beyond, on schedule, with transparent pricing and no runaround. Call (321) 336-3750 for a free estimate.",
   },
   {
     question: "Do you handle commercial renovations?",
@@ -24,9 +24,9 @@ const HOME_FAQS = [
       "Yes. We deliver tenant buildouts and fit-outs, office and retail renovations, facility maintenance and repairs, and ADA compliance upgrades for commercial properties — working within your timeline and budget.",
   },
   {
-    question: "Are you licensed and insured?",
+    question: "Are you insured?",
     answer:
-      "Yes. C&C Contracting LLC is a licensed and insured general contractor operating in the State of Florida, and we maintain general liability, workers' compensation, and commercial auto coverage. License and insurance documentation is available upon request.",
+      "Yes. C&C Contracting LLC carries general liability, workers' compensation, and commercial auto coverage. Certificates of insurance are available on request.",
   },
   {
     question: "What areas do you serve?",
@@ -36,7 +36,7 @@ const HOME_FAQS = [
   {
     question: "How do I get an estimate?",
     answer:
-      "Estimates are free and no-obligation. Submit the request form on our website, call (321) 336-3750, or email info@candcontracting.com. We'll schedule a free on-site consultation, assess the space, and deliver a detailed, transparent proposal with scope, materials, timeline, and pricing.",
+      "Estimates are free and no-obligation. Submit the request form on our website, call (321) 336-3750, or email treycooper@candcontracting.com. We'll schedule a free on-site consultation, assess the space, and deliver a detailed, transparent proposal with scope, materials, timeline, and pricing.",
   },
   {
     question: "What residential services do you offer?",
@@ -57,7 +57,7 @@ export default function Home() {
         data={generalContractorSchema({
           "@id": `${SITE_URL}/#business`,
           description:
-            "Licensed general contractor based in Melbourne, FL, serving all of Florida. Residential remodels, commercial buildouts, and specialty construction. Free estimates.",
+            "General contractor based in Melbourne, FL, serving all of Florida. Residential remodels, commercial buildouts, and specialty construction. Free estimates.",
         })}
       />
       <JsonLd data={faqPageSchema(HOME_FAQS)} />

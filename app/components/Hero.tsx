@@ -25,7 +25,7 @@ export default function Hero() {
       <div className="mx-auto w-full max-w-7xl px-6">
         <div className="max-w-4xl">
           <span className="mb-5 block font-heading text-sm font-bold uppercase tracking-[0.3em] text-accent">
-            Licensed &amp; Insured General Contractor
+            Insured General Contractor
           </span>
           <h1 className="mb-8 font-heading text-5xl font-extrabold uppercase leading-[1.05] text-white md:text-7xl">
             Built Right.

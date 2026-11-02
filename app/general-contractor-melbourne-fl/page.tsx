@@ -4,7 +4,7 @@ import { SITE_URL } from "../lib/site";
 
 const TITLE = "General Contractor in Melbourne, FL | C&C Contracting";
 const DESCRIPTION =
-  "Licensed and insured general contractor in Melbourne, FL. Residential remodels, commercial buildouts, and specialty construction across Brevard County. Free estimates — (321) 336-3750.";
+  "Insured general contractor in Melbourne, FL. Residential remodels, commercial buildouts, and specialty construction across Brevard County. Free estimates — (321) 336-3750.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -19,16 +19,16 @@ const data: SEOPageData = {
   headline: "General Contractor in",
   headlineAccent: "Melbourne, FL",
   subheadline:
-    "Licensed and insured general contracting for homes and businesses in Melbourne and across the Space Coast. Built right, built to last.",
+    "Insured general contracting for homes and businesses in Melbourne and across the Space Coast. Built right, built to last.",
   intro: [
-    "C&C Contracting is a licensed and insured general contractor headquartered in Melbourne, Florida. We serve homeowners, property managers, and business owners throughout Brevard County with one standard: work that is built to code and beyond, delivered on schedule, at a price you understood before the first hammer swung.",
+    "C&C Contracting is an insured general contractor headquartered in Melbourne, Florida. We serve homeowners, property managers, and business owners throughout Brevard County with one standard: work that is built to code and beyond, delivered on schedule, at a price you understood before the first hammer swung.",
     "Melbourne construction has its own realities — Florida Building Code wind-load requirements, salt-air corrosion near the Indian River Lagoon, permitting through the City of Melbourne and Brevard County building departments, and summer storm seasons that punish shortcuts. We plan around all of it. Every project starts with a free on-site consultation, moves to a detailed written estimate with scope, materials, timeline, and pricing, and finishes with a final walkthrough and client sign-off.",
     "On the residential side, we handle kitchen and bathroom remodels, flooring and tile, drywall and painting, decks and outdoor living, home additions, and handyman work. For commercial clients we deliver tenant buildouts, office and retail renovations, facility maintenance, and ADA compliance upgrades. When a project calls for heavier work — demolition, concrete and masonry, framing and structural — our specialty construction crews take it from site prep to final inspection.",
     "No hidden fees. No surprise change orders. No runaround. Just commercial-grade craftsmanship from a contractor that picks up the phone. Call (321) 336-3750 or request a free estimate below.",
   ],
   serviceName: "General Contracting",
   serviceDescription:
-    "Licensed general contracting in Melbourne, FL — residential remodels, commercial buildouts, and specialty construction with free estimates.",
+    "General contracting in Melbourne, FL — residential remodels, commercial buildouts, and specialty construction with free estimates.",
   serviceArea: "Melbourne, FL",
   highlights: [
     {
@@ -49,9 +49,9 @@ const data: SEOPageData = {
   ],
   faqs: [
     {
-      question: "Are you a licensed general contractor in Melbourne, FL?",
+      question: "Are you insured?",
       answer:
-        "Yes. C&C Contracting LLC is a licensed and insured general contractor operating in the State of Florida, based in Melbourne. License and insurance documentation is available upon request.",
+        "Yes. C&C Contracting LLC carries general liability, workers' compensation, and commercial auto coverage. Certificates of insurance are available on request.",
     },
     {
       question: "Do you handle permits with the City of Melbourne?",

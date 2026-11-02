@@ -10,6 +10,7 @@ interface ServiceBlock {
   image: string;
   imageAlt: string;
   reversed?: boolean;
+  href?: string;
 }
 
 const SERVICE_BLOCKS: ServiceBlock[] = [
@@ -28,6 +29,7 @@ const SERVICE_BLOCKS: ServiceBlock[] = [
     ],
     image: "/residential-remodel.jpg",
     imageAlt: "High-end residential kitchen remodel with navy cabinetry",
+    href: "/kitchen-bathroom-remodeling-melbourne",
   },
   {
     eyebrow: "COMMERCIAL",
@@ -44,6 +46,7 @@ const SERVICE_BLOCKS: ServiceBlock[] = [
     image: "/commercial-buildout.jpg",
     imageAlt: "Commercial office space mid-renovation with exposed steel",
     reversed: true,
+    href: "/commercial-renovation-brevard-county",
   },
   {
     eyebrow: "SPECIALTY",
@@ -58,6 +61,24 @@ const SERVICE_BLOCKS: ServiceBlock[] = [
     ],
     image: "/specialty-concrete.jpg",
     imageAlt: "Concrete foundation and structural framing at a Florida jobsite",
+    href: "/general-contractor-melbourne-fl",
+  },
+  {
+    eyebrow: "RESTORATION",
+    title: "Water & Flood Damage Restoration",
+    description:
+      "Flooded or leaking? We tear out what's ruined, dry the structure with commercial air movers and dehumidifiers, and rebuild what the water took. One crew from dry-out to final finish.",
+    items: [
+      "Wet Drywall, Insulation & Flooring Tear-Out",
+      "Structural Drying with Air Movers & Dehumidifiers",
+      "Photo Documentation for Your Insurance Claim",
+      "Drywall, Flooring & Trim Rebuild",
+      "Storm & Flood Damage Repairs",
+    ],
+    image: "/hero-construction.jpg",
+    imageAlt: "Interior drywall and framing being rebuilt after water damage",
+    reversed: true,
+    href: "/water-damage-restoration-melbourne",
   },
 ];
 
@@ -100,6 +121,14 @@ export default function Services() {
                       </li>
                     ))}
                   </ul>
+                  {block.href && (
+                    <Link
+                      href={block.href}
+                      className="btn-fill mt-8 inline-block border-2 border-primary px-6 py-3 font-heading text-xs font-bold uppercase tracking-[0.18em] text-foreground"
+                    >
+                      Learn More
+                    </Link>
+                  )}
                 </div>
               </div>
             </ScrollReveal>

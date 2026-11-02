@@ -1,10 +1,10 @@
 const HOMEPAGE_MARKDOWN = `# C&C Contracting — General Contractor | Melbourne, FL — Serving All of Florida
 
-> C&C Contracting LLC is a licensed and insured general contractor serving all of Florida. Residential remodels, commercial buildouts, and specialty construction. Based in Melbourne, FL — from the Space Coast to South Florida. Free estimates.
+> C&C Contracting LLC is an insured general contractor serving all of Florida. Residential remodels, commercial buildouts, and specialty construction. Based in Melbourne, FL — from the Space Coast to South Florida. Free estimates.
 
 **Website**: [https://candcontracting.com](https://candcontracting.com)
 **Phone**: (321) 336-3750
-**Email**: info@candcontracting.com
+**Email**: treycooper@candcontracting.com
 **Hours**: Mon–Fri 7AM–5PM (emergency service available)
 
 ---
@@ -13,7 +13,7 @@ const HOMEPAGE_MARKDOWN = `# C&C Contracting — General Contractor | Melbourne,
 
 Quality general contracting for residential and commercial projects. From kitchen remodels to full commercial buildouts, we deliver craftsmanship you can count on.
 
-- Licensed & Insured
+- Fully Insured
 - Residential & Commercial
 - Quality Guaranteed
 - Free Estimates
@@ -50,6 +50,15 @@ Heavy-duty construction services for projects that require specialized equipment
 - Concrete & Masonry
 - Framing & Structural Work
 - Exterior Siding & Facades
+
+### Restoration — Water & Flood Damage Restoration
+Flooded or leaking? We tear out what's ruined, dry the structure with commercial air movers and dehumidifiers, and rebuild what the water took. One crew from dry-out to final finish.
+
+- Wet Drywall, Insulation & Flooring Tear-Out
+- Structural Drying with Air Movers & Dehumidifiers
+- Photo Documentation for Your Insurance Claim
+- Drywall, Flooring & Trim Rebuild
+- Storm & Flood Damage Repairs
 
 ---
 
@@ -95,7 +104,7 @@ All of Florida. Based in Melbourne / Brevard County / the Space Coast (Palm Bay,
 
 - **Location**: Melbourne, FL
 - **Phone**: (321) 336-3750
-- **Email**: info@candcontracting.com
+- **Email**: treycooper@candcontracting.com
 - **Free estimate**: [https://candcontracting.com/#contact](https://candcontracting.com/#contact)
 - **LLM context file**: [https://candcontracting.com/llms.txt](https://candcontracting.com/llms.txt)
 

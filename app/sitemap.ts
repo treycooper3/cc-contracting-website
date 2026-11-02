@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "commercial-renovation-brevard-county",
     "kitchen-bathroom-remodeling-melbourne",
     "general-contractor-palm-bay",
+    "water-damage-restoration-melbourne",
   ];
 
   return [

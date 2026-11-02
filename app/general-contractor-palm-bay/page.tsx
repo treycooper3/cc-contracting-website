@@ -4,7 +4,7 @@ import { SITE_URL } from "../lib/site";
 
 const TITLE = "General Contractor in Palm Bay, FL | C&C Contracting";
 const DESCRIPTION =
-  "Licensed and insured general contractor serving Palm Bay, FL. Home remodels, commercial renovations, and specialty construction. Free estimates — (321) 336-3750.";
+  "Insured general contractor serving Palm Bay, FL. Home remodels, commercial renovations, and specialty construction. Free estimates — (321) 336-3750.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -19,16 +19,16 @@ const data: SEOPageData = {
   headline: "General Contractor in",
   headlineAccent: "Palm Bay, FL",
   subheadline:
-    "Licensed and insured general contracting for Palm Bay homes and businesses — remodels, buildouts, and specialty construction, minutes from our Melbourne base.",
+    "Insured general contracting for Palm Bay homes and businesses — remodels, buildouts, and specialty construction, minutes from our Melbourne base.",
   intro: [
-    "Palm Bay is the largest city in Brevard County, and its housing stock spans everything from 1980s concrete-block homes in Port Malabar to brand-new construction pushing south and west. C&C Contracting serves all of it. We are a licensed and insured Florida general contractor based in neighboring Melbourne — close enough that Palm Bay is home turf, not a long-distance service call.",
-    "For Palm Bay homeowners, we deliver kitchen and bathroom remodels, flooring and tile installation, drywall and painting, decks, patios and outdoor living, home additions, and handyman services. Older block homes here often need updates that touch structure, plumbing, or electrical — work that legally and practically belongs with a licensed contractor who pulls the right permits with the City of Palm Bay and builds to Florida Building Code, including the wind-load standards that matter every storm season.",
+    "Palm Bay is the largest city in Brevard County, and its housing stock spans everything from 1980s concrete-block homes in Port Malabar to brand-new construction pushing south and west. C&C Contracting serves all of it. We are an insured Florida general contractor based in neighboring Melbourne — close enough that Palm Bay is home turf, not a long-distance service call.",
+    "For Palm Bay homeowners, we deliver kitchen and bathroom remodels, flooring and tile installation, drywall and painting, decks, patios and outdoor living, home additions, and handyman services. Older block homes here often need updates that touch structure, plumbing, or electrical — work that requires permits from the City of Palm Bay, licensed trades, and construction to Florida Building Code, including the wind-load standards that matter every storm season.",
     "For businesses along Malabar Road, Babcock Street, and Palm Bay Road, we handle tenant buildouts, office and retail renovations, facility maintenance and repairs, and ADA compliance upgrades. And when a project needs heavier muscle — demolition and site prep, concrete and masonry, framing and structural work — our specialty construction services cover it with the equipment and precision the job demands.",
     "The process is simple: free on-site consultation, detailed transparent estimate, expert build with regular updates, and a final walkthrough with your sign-off. Call (321) 336-3750 or request your free estimate below.",
   ],
   serviceName: "General Contracting",
   serviceDescription:
-    "Licensed general contracting in Palm Bay, FL — residential remodels, commercial renovations, and specialty construction with free estimates.",
+    "General contracting in Palm Bay, FL — residential remodels, commercial renovations, and specialty construction with free estimates.",
   serviceArea: "Palm Bay, FL",
   highlights: [
     {
@@ -54,9 +54,9 @@ const data: SEOPageData = {
         "Yes — northeast to southwest, from established Port Malabar neighborhoods to new construction areas. Our Melbourne headquarters puts the whole city within a short drive.",
     },
     {
-      question: "Are you licensed and insured?",
+      question: "Are you insured?",
       answer:
-        "Yes. C&C Contracting LLC is a licensed and insured general contractor operating in the State of Florida, with general liability, workers' compensation, and commercial auto coverage. Documentation is available upon request.",
+        "Yes. C&C Contracting LLC carries general liability, workers' compensation, and commercial auto coverage. Certificates of insurance are available on request.",
     },
     {
       question: "Do you pull permits with the City of Palm Bay?",
