@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { FORM_WEBHOOK_URL } from "../lib/site";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -31,7 +30,7 @@ export default function ContactForm() {
 
     setStatus("sending");
     try {
-      const response = await fetch(FORM_WEBHOOK_URL, {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
