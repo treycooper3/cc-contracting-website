@@ -35,3 +35,14 @@ from (values
 cross join cc_leads l
 where l.lead_ref = 'CC-2026-RENO-GULFLAND'
   and not exists (select 1 from cc_events e where e.lead_id = l.id and e.title = v.title);
+
+-- Deposit logged so the job ledger shows it collected. Friend job: NO formal
+-- invoice was issued. 90001 is a placeholder outside the 4-digit invoice book
+-- (book numbers are 10xx), so it cannot collide with a real invoice.
+insert into cc_invoices (invoice_no, lead_id, description, amount, sent_at, expected_at, paid_at, method, notes)
+  select 90001, l.id, 'Apopka renovation, 50% deposit (no formal invoice)', 13000.00,
+         null, null, '2026-11-19', 'wire',
+         'Friend job via Donald: paid against the $26,000 Essentials proposal, no invoice issued. '
+         '90001 is a portal placeholder, not an invoice-book number.'
+  from cc_leads l where l.lead_ref = 'CC-2026-RENO-GULFLAND'
+on conflict (invoice_no) do nothing;
