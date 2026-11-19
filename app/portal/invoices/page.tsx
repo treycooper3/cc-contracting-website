@@ -53,7 +53,9 @@ export default async function InvoicesPage() {
 
   const aging = agingTotals(outstanding.map((inv) => ({ due: inv.expected_at, balance: Number(inv.amount) })));
   const agingRows = AGING_BUCKETS.map((bucket) => ({ label: bucket, value: aging[bucket] }));
-  const nextNo = invoices.length ? Math.max(...invoices.map((i) => i.invoice_no)) + 1 : FIRST_INVOICE_NO;
+  // ponytail: 5-digit numbers (90001+) are no-invoice payment placeholders, outside the book.
+  const bookNos = invoices.map((i) => i.invoice_no).filter((no) => no < 10000);
+  const nextNo = bookNos.length ? Math.max(...bookNos) + 1 : FIRST_INVOICE_NO;
 
   return (
     <section className="flex flex-col gap-6">
